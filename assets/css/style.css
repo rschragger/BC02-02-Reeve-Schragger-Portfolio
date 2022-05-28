@@ -3,6 +3,7 @@
 :root {
     --dark: rgb(116, 0, 170);
     --light: rgb(184, 189, 247);
+    --highlight: rgb(255, 255, 255);
 
 }
 
@@ -11,12 +12,19 @@
     font-family: Calibri, 'Trebuchet MS', sans-serif;
 }
 
+*:active{
+    color: var(--highlight)
+}
+
 
 /* Standard Sections */
 header {
     display: flex;
-    flex-direction: row;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items:baseline ;
     background-color: var(--dark);
+    
 }
 
 body {
@@ -44,10 +52,34 @@ h1 {
 
 
 /* Tags in Standard Sections */
-header li {
-    flex-direction: row ;
+
+nav ul {
+    display: flex;
+    justify-content: right; 
+    flex-wrap: wrap;
+    
+}
+
+nav a {
+    flex-direction: row;
     font-size: 130%;
     color: var(--light);
     background-color: var(--dark);
-    border: 0 0 5 0 solid var(--light);
+    padding: 2px 5px 10px 5px ;
+    border: 0 0 5px 0 solid var(--light);
+    margin: 5px ;
+    text-underline: none ;
 }
+
+
+
+/* Media Responsiveness */
+
+@media (max-width: 800px) {
+    header, nav, ul {
+      flex-direction: column;
+      justify-content:center;
+      flex: 100%;
+      /* text-align: center; */
+    }
+  }
