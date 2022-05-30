@@ -7,6 +7,7 @@
     --bggrey: #ddd;
     --highlight: rgb(255, 255, 255);
 
+    --gradientDark: linear-gradient(var(--dark) 50%, var(--darker))
 }
 
 /* Universal Settings */
@@ -20,11 +21,11 @@ header {
     flex-direction: row;
     justify-content: space-between;
     align-items: baseline;
-    background-color: var(--dark);
+    /* background-color: var(--dark); */
+    background-image: var(--gradientDark);
 }
 
 body {
-    /* display: flex; */
     line-height: 1.5;
 }
 
@@ -37,16 +38,21 @@ section {
 
 footer {
     background-color: var(--dark);
+    background-image: var(--gradientDark);
+
     border-top: 3px solid var(--light);
+    padding: 3px;
+
     color: var(--light);
     font-size: small;
+    text-align: right;
 }
 
 /* Standard Tags */
 h1 {
     font: 800;
     font-size: 200%;
-    padding: 5px 5px 5px 50px;
+    padding: 5px 5px 5px 20px;
     margin: 5px 0;
     color: var(--dark);
     background-color: var(--light);
@@ -54,14 +60,14 @@ h1 {
 
 /* Body copy settings */
 p {
-    color:var(--darker);
+    color: var(--darker);
     padding-left: 10px;
     font: 400;
 }
 
 a {
-    padding: 0 ;
-    margin: 0 ;
+    padding: 0;
+    margin: 0;
 }
 
 
@@ -124,8 +130,7 @@ section h2 {
     background-position: center;
     background-size: cover;
     height: 150px;
-    min-width: 600px;
-    background-color: aqua;
+    min-width: max-content;
     position: relative;
 }
 
@@ -156,16 +161,18 @@ section h2 {
     width: 48%;
     position: relative;
     padding: 0px;
-    margin:5px;
+    margin: 5px;
 }
+
 /* This is the first "hero" image */
 #work-hero li {
     display: flex;
-    flex-wrap:wrap;
+    flex-wrap: wrap;
     width: 97%;
     position: relative;
 }
-#work img {   
+
+#work img {
     width: 100%;
     border: 5px solid var(--light);
 
@@ -178,17 +185,13 @@ section h2 {
 /* Heading for work images  */
 .workDesc {
     position: absolute;
-    bottom: 10px;
+    bottom: 20px;
     left: 0;
     display: block;
-    max-width: 200px;
-    /* margin: 10px 10px; */
-    /* padding: 10px; */
 
     background-color: var(--light);
     color: var(--dark);
     text-align: left;
-
     text-decoration: none;
 }
 
@@ -198,21 +201,22 @@ section h2 {
 }
 
 
-#contact-list  {
+#contact-list {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
-    width:100%; 
+    width: 100%;
 
 }
-#contact-list  ul{
+
+#contact-list ul {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content:space-evenly;
-    width:100%; 
+    justify-content: space-evenly;
+    width: 100%;
 
 }
 
@@ -223,10 +227,10 @@ section h2 {
     flex-flow: wrap;
     justify-content: space-around;
 
-    font-size: 120% ;
+    font-size: 120%;
     color: var(--dark);
     text-decoration: none;
-border-bottom: 5px solid var(--dark);
+    border-bottom: 5px solid var(--dark);
 
 }
 
@@ -238,17 +242,31 @@ border-bottom: 5px solid var(--dark);
 
     header,
     header h1,
+    nav
+
+    /*nav,
+    nav ul,
+    nav li,
+    nav a */
+        {
+        display: flex;
+        flex-direction: column;
+        flex-flow: wrap;
+
+        /* justify-content: right; */
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
     nav,
     nav ul,
     nav li,
     nav a {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        box-sizing: border-box;
-        text-align: center;
-        width: 100%;
-        margin:0;
+
+        flex-flow: wrap;
+        min-width: 100px;
     }
 
     #hero-image h2 {
@@ -263,7 +281,7 @@ border-bottom: 5px solid var(--dark);
 
     section h2 {
         flex-direction: column;
-        width: 100%;
+        width: 95%;
         margin: 10px 10px;
         padding: 10px 0;
 
@@ -278,13 +296,14 @@ border-bottom: 5px solid var(--dark);
     #work li {
         width: 100%;
     }
+
     #contact-me ul {
         flex-direction: column;
         /* border: none; */
     }
 
     #contact-me a {
-        
+
         width: 100%;
         text-decoration: underline;
         border: none;
@@ -293,8 +312,34 @@ border-bottom: 5px solid var(--dark);
 
 }
 
-/* Phone media <400 pixel */
-@media (max-width: 400px) {
+/* Phone media <460 pixel */
+@media (max-width: 460px) {
+
+    header,
+    header h1,
+    nav,
+    nav ul,
+    nav li,
+    nav a {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        box-sizing: border-box;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+
+    .workDesc  {
+        position: relative;
+        width: 100%;
+        margin:0;
+    }
+
+    #work li{
+        margin: 0 ;
+    }
+   
 
 
 }
