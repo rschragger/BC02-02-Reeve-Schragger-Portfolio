@@ -2,6 +2,7 @@
 
 :root {
     --dark: rgb(116, 0, 170);
+    --darker: rgb(56, 1, 82);
     --light: rgb(184, 189, 247);
     --bggrey: #ddd;
     --highlight: rgb(255, 255, 255);
@@ -53,8 +54,14 @@ h1 {
 
 /* Body copy settings */
 p {
+    color:var(--darker);
     padding-left: 10px;
     font: 400;
+}
+
+a {
+    padding: 0 ;
+    margin: 0 ;
 }
 
 
@@ -86,16 +93,17 @@ section div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 5px 0 ;
+    margin: 5px 0;
 }
 
+/* Side header  */
 section h2 {
     display: flex;
     flex-direction: row;
     justify-content: right;
     width: 150px;
     min-width: 150px;
-    /* margin: 10px 10px; */
+    margin: 10px 0 0 0;
     padding: 10px;
 
     border-right: 5px solid var(--dark);
@@ -134,65 +142,99 @@ section h2 {
 }
 
 /* Standard images for work section */
-#work li{
-    position: relative;
+#work ul {
+    display: flex;
+    flex-wrap: wrap;
 }
-#work img {
-    /* display: flex; */
-    /* flex-direction: row; */
+
+#work li {
+    position: relative;
+    display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 45%;
+    width: 48%;
     position: relative;
-    padding: 10px;
+    padding: 0px;
+    margin:5px;
+}
+/* This is the first "hero" image */
+#work-hero li {
+    display: flex;
+    flex-wrap:wrap;
+    width: 97%;
+    position: relative;
+}
+#work img {   
+    width: 100%;
+    border: 5px solid var(--light);
+
+    position: relative;
+    padding: 0px;
 }
 
-/* This is the first "hero" image */
-#work-hero img {
-    display: flex;
-    /* flex-direction: column; */
-    flex-wrap: wrap;
-    width: 100%;
-    position: relative;
-}
+
 
 /* Heading for work images  */
-#work h4,
-#work-hero h4 {
+.workDesc {
     position: absolute;
-    bottom: 0;
-    right: 0;
-    /* width: 150px; */
-    margin: 10px 10px;
-    padding: 10px;
+    bottom: 10px;
+    left: 0;
+    display: block;
+    max-width: 200px;
+    /* margin: 10px 10px; */
+    /* padding: 10px; */
 
     background-color: var(--light);
     color: var(--dark);
-    text-align: right;
-    font-size: 125%;
+    text-align: left;
+
     text-decoration: none;
 }
 
+.workDesc h4 {
+    padding: 0 10px;
+    font-size: 125%;
+}
 
-#contact-me div {
+
+#contact-list  {
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    width:100%; 
+
+}
+#contact-list  ul{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    width:100%; 
 
 }
 
-#contact-me li {
+#contact-list a {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    /* flex-direction: row; */
     flex-wrap: wrap;
-    background-color: aqua;
+    flex-flow: wrap;
+    justify-content: space-around;
+
+    font-size: 120% ;
+    color: var(--dark);
+    text-decoration: none;
+border-bottom: 5px solid var(--dark);
 
 }
 
 
 /* Media Responsiveness */
 
-@media (max-width: 800px) {
+/* Tablet media <825 pixel */
+@media (max-width: 825px) {
 
     header,
     header h1,
@@ -206,6 +248,7 @@ section h2 {
         box-sizing: border-box;
         text-align: center;
         width: 100%;
+        margin:0;
     }
 
     #hero-image h2 {
@@ -231,9 +274,27 @@ section h2 {
         font-size: 150%;
         text-align: left;
     }
-    #work img {
+
+    #work li {
         width: 100%;
     }
-    
+    #contact-me ul {
+        flex-direction: column;
+        /* border: none; */
+    }
+
+    #contact-me a {
+        
+        width: 100%;
+        text-decoration: underline;
+        border: none;
+    }
+
+
+}
+
+/* Phone media <400 pixel */
+@media (max-width: 400px) {
+
 
 }
