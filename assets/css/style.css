@@ -7,7 +7,9 @@
     --bggrey: #ddd;
     --highlight: rgb(255, 255, 255);
 
-    --gradientDark: linear-gradient(var(--dark) 50%, var(--darker))
+    --gradientDark: linear-gradient(var(--dark) 50%, var(--darker) 100%);
+    /* --gradientLight: linear-gradient(var(--light) 50%, rgba(255, 255, 255, 0) 100%) ; */
+    --gradientLight: linear-gradient(rgba(255, 255, 255, 0), var(--highlight));
 }
 
 /* Universal Settings */
@@ -87,11 +89,20 @@ nav a {
     justify-content: center;
     font-size: 130%;
     color: var(--light);
-    background-color: var(--dark);
+    background-color: none;
+    /* var(--dark);*/
     padding: 5px;
     border-bottom: 4px solid var(--light);
     margin: 5px;
     text-decoration: none;
+}
+
+nav a:hover {
+    color: var(--highlight);
+    border-color: var(--highlight);
+    border-image;
+    var(--gradientLight);
+    /* background-image:  var(--gradientDark); */
 }
 
 /* Sections Part, same design for all containing boxes */
@@ -179,6 +190,9 @@ section h2 {
     position: relative;
     padding: 0px;
 }
+/* #work img:hover { 
+    border: 5px solid var(--dark);
+} */
 
 
 
@@ -194,6 +208,19 @@ section h2 {
     text-align: left;
     text-decoration: none;
 }
+
+
+
+#workLi:hover *  {
+    background-color: var(--dark);
+    color: var(--highlight);
+    border: 3px solid var(--dark);
+
+}
+/* .workDesc:hover  img:hover {
+    background-color: var(--dark);
+    color: var(--highlight);
+} */
 
 .workDesc h4 {
     padding: 0 10px;
@@ -226,12 +253,21 @@ section h2 {
     flex-wrap: wrap;
     flex-flow: wrap;
     justify-content: space-around;
+    padding: 5px;
 
     font-size: 120%;
     color: var(--dark);
     text-decoration: none;
     border-bottom: 5px solid var(--dark);
 
+}
+
+#contact-list a:hover {
+    color: var(--highlight);
+    background-image: var(--gradientDark);
+    border-color: var(--darker);
+
+    text-decoration: underline;
 }
 
 
@@ -243,11 +279,6 @@ section h2 {
     header,
     header h1,
     nav
-
-    /*nav,
-    nav ul,
-    nav li,
-    nav a */
         {
         display: flex;
         flex-direction: column;
@@ -298,15 +329,16 @@ section h2 {
     }
 
     #contact-me ul {
-        flex-direction: column;
+        /* flex-direction: column; */
         /* border: none; */
     }
 
     #contact-me a {
 
-        width: 100%;
-        text-decoration: underline;
-        border: none;
+flex-flow: wrap;
+min-width: 300px;
+margin-bottom: 10px;
+      
     }
 
 
@@ -330,16 +362,16 @@ section h2 {
         margin: 0;
     }
 
-    .workDesc  {
+    .workDesc {
         position: relative;
         width: 100%;
-        margin:0;
+        margin: 0;
     }
 
-    #work li{
-        margin: 0 ;
+    #work li {
+        margin: 0;
     }
-   
+
 
 
 }
