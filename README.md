@@ -4,6 +4,7 @@
 
 This project is a simple portfolio template for Reeve Schragger showing usage of HTML and CSS.
 Initial design will be filled with a backbone of text and images that can be filled in at a later stage.
+Site is at [rschragger.github.io/BC02-02-Reeve-Schragger-Portfolio/](https://rschragger.github.io/BC02-02-Reeve-Schragger-Portfolio/)
 
 ## Table of Contents 
 
