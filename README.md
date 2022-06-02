@@ -37,8 +37,8 @@ Unlicensed
 
 Project is designed to allow for desktop, tablet and phone screens
 Note that the links on the images for main screen will take you to new pages with more explanation for the further links to example sites. This has been done for 2 reasons
--1 This allows for explanation before seeing why example sites were created
--2 At the student part of my journey, there are not yet sites I can access for this portfolio and this allows easy progress to the future site establishment
+- 1 This allows for explanation before seeing why example sites were created
+- 2 At the student part of my journey, there are not yet sites I can access for this portfolio and this allows easy progress to the future site establishment
 
 
 ## Tests
