@@ -79,14 +79,14 @@
         method: 'GET',
         redirect: 'follow',
         //mode: 'no-cors',
-         Headers: {
-            //'Access-Control-Allow-Origin': 'http://127.0.0.1:5500',
+         Headers: JSON.stringify({
+            'Access-Control-Allow-Origin': document.location.origin,
            // 'origin': 'http://127.0.0.1:5500',
             //'Host': 'http://127.0.0.1:5500',
             //'Accept': '*/*',
            //'User-Agent': 'PostmanRuntime/7.29.0',
             //'Accept-Encoding': 'gzip, deflate, br',
-       },
+       }),
 
     };
 
